@@ -1,0 +1,38 @@
+<head>
+    <title>Favourites | CinoHolic : Lights, camera, streaming!</title>
+</head>
+
+<div class="container">
+    <div class="content" *ngIf="responseStatus !== 404; else responseError">
+
+        <div class="title">Your collections</div>
+        <div class="sub-title">Stories that are closer to your He<i class="uil uil-heartbeat"></i>rt</div>
+        <div class="content-data" *ngFor="let d of getFavourites">
+            <div class="card">
+                <div class="movie-data">
+                    <div class="movie-name">{{d.movieName}}</div>
+                    <div class="genres">{{d.genre}}</div>
+                </div>
+                <div class="btns">
+                    <button class="watchNowbtn" routerLink="/movie-detail-page" (click)="getId(d.movieId)">Watch
+                        Now</button>
+                    <button class="removebtn"
+                        (click)="removeFromFavorites(d.movieId); checkIsFavourite(d.movieId)">Remove</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Movies not found -->
+    <ng-template #responseError>
+        <div class="err-content">
+            <div class="img">
+                <img src="assets/images/noFavMovie.png">
+            </div>
+            <div class="msg">
+                <p>Currently, there is <span>no movie collection</span> found!</p>
+            </div>
+        </div>
+    </ng-template>
+</div>

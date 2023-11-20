@@ -1,0 +1,341 @@
+.container {
+    padding: 30px;
+}
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.title {
+    flex: 1;
+    color: var(--primary-color);
+    font-size: 32px;
+}
+
+.account-icon {
+    color: black;
+    flex: 1;
+    text-align: right;
+}
+
+.account-icon i {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.content-data {
+    padding-top: 20px;
+    margin-top: 20px;
+}
+
+.content-title .title {
+    font-size: large;
+    color: var(--secondary-color);
+}
+
+.more {
+    font-size: 13px;
+    color: var(--primary-color);
+}
+
+.more:hover{
+    cursor: pointer;
+    color: var(--secondary-color);
+    transition: all 0.3s ease-in-out;
+}
+
+.showData {
+    margin-top: 10px;
+    display: inline-flex;
+}
+
+.card {
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    height: 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+
+}
+
+.card-details{
+    display: flex;
+    column-gap: 15px;
+}
+
+.card img {
+    width: 50%;
+    object-fit: cover;
+}
+
+.watchNowbtn{
+    width: 100%;
+    background-color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+    color: #ffffff;
+    display: inline-block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    margin-top: 77px;
+    outline: none;
+    padding: 11px 13px 11px 13px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.movieDetails{
+    font-size: 14px;
+    color: var(--primary-color);
+}
+
+.movieDetails .name{
+    margin-bottom: 20px;
+}
+
+.movieDetails .duration{
+    margin-bottom: 20px;
+}
+
+.movieDetails .genres{
+    margin-bottom: 20px;
+}
+
+.movieDetails .duration, .genres, .rating{
+    font-size: 12px;
+}
+
+.account-icon ul li {
+    right: 0;
+    text-align: left;
+    list-style: none;
+    padding: 0px 40px 10px 10px;
+    margin: 13px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.account-icon ul li:first-child {
+    padding-top: 30px;
+}
+
+.account-icon ul li:last-child a {
+    padding-bottom: 30px;
+    color: red;
+}
+
+.account-icon ul li:last-child a:hover {
+    color: red;
+}
+
+.dropdown_content .uil {
+    padding-right: 5px;
+    font-size: 20px;
+}
+
+.account-icon ul li .uil-signout {
+    color: red;
+    font-size: 18px;
+}
+
+hr {
+    border: 0.5px solid var(--secondary-color);
+    width: 150px;
+}
+
+.account-icon ul li a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.account-icon ul li a:hover {
+    color: var(--secondary-color);
+    transition: 0.5s ease;
+}
+
+.account-icon .dropdown_content {
+    font-style: normal;
+    margin-top: -10px;
+    margin-right: 30px;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 100px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+    right: 0;
+    opacity: 0;
+    z-index: -999;
+    transition: all ease 0.5s;
+}
+
+.account-icon i:hover .dropdown_content {
+    opacity: 1;
+    z-index: 99;
+    margin-top: 0;
+}
+
+/* Footer */
+.footer {
+    display: flex;
+    margin-top: 20px;
+    border-top: 0.5px solid var(--primary-color);
+    bottom: 0;
+    width: 100%;
+    color: var(--primary-color);
+    padding-top: 10px;
+}
+
+.footer i {
+    font-size: large;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.footer .footer-icons {
+    flex: 1;
+}
+
+.footer .legal-doc a{
+    padding: 10px;
+    font-size: 12px;
+    cursor: pointer;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.footer .legal-doc a:hover{
+    color: var(--secondary-color);
+    transition: all 0.5s ease-in-out;
+}
+
+.footer i:hover {
+    color: var(--secondary-color);
+    transition: all 0.5s ease-in-out;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .title {
+        font-size: 24px;
+    }
+
+}
+
+@media (max-width: 576px) {
+    .title {
+        font-size: 24px;
+    }
+
+    .account-icon i {
+        font-size: 21px;
+    }
+
+    .account-icon ul li {
+        right: 0;
+        text-align: left;
+        list-style: none;
+        padding: 0px 40px 10px 10px;
+        margin: 13px;
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+    .account-icon ul li:first-child {
+        padding-top: 30px;
+    }
+
+    .account-icon ul li:last-child a {
+        padding-bottom: 30px;
+        color: red;
+    }
+
+    .account-icon ul li:last-child a:hover {
+        color: red;
+    }
+
+    .dropdown_content .uil {
+        padding-right: 5px;
+        font-size: 19px;
+    }
+
+    .account-icon ul li .uil-signout {
+        color: red;
+        font-size: 17px;
+    }
+
+    hr {
+        border: 0.5px solid var(--secondary-color);
+        width: 100%;
+    }
+
+    .account-icon ul li a {
+        color: var(--primary-color);
+        text-decoration: none;
+    }
+
+    .account-icon ul li a:hover {
+        color: var(--secondary-color);
+        transition: 0.5s ease;
+    }
+
+    .account-icon .dropdown_content {
+        margin-top: -10px;
+        margin-right: 0px;
+        position: absolute;
+        background-color: #ffffff;
+        min-width: 100%;
+        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+        right: 0;
+        opacity: 0;
+        z-index: -999;
+        transition: all ease 0.5s;
+    }
+
+    .account-icon:hover .dropdown_content {
+        opacity: 1;
+        z-index: 99;
+        margin-top: 0;
+    }
+
+    .content-data .showData {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .content-data .title {
+        font-size: 16px;
+    }
+
+    .footer {
+        text-align: center;
+        font-size: 14px;
+        display: block;
+    }
+
+    .footer i {
+        font-size: medium;
+    }
+
+    .footer .footer-icons {
+        display: block;
+    }
+
+    .footer .legal-doc{
+        font-size: medium;
+        margin-top: 10px;
+        
+    }
+
+}

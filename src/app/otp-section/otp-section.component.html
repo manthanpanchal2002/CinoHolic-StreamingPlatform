@@ -1,0 +1,21 @@
+<div class="container" *ngIf="responseStatus !== 200; else resetPasswordSection">
+    <h1>CinoHolic</h1>
+    <p class="Msg" *ngIf="!responseStatusText; else responseError">Check your mail we have send OTP on
+        <span>{{email}}</span></p>
+    <ng-template #responseError>
+        <p class="response-error"><i class="uil uil-info-circle"></i>Oops! {{responseStatusText}}</p>
+    </ng-template>
+
+    <form #otpForm="ngForm" (ngSubmit)="verifyOTP()">
+        <input type="text" placeholder="Enter 4-Digit OTP" name="otp" [(ngModel)]="userEnteredOTP" required #otp="ngModel">
+        <div class="errMsg" *ngIf="otp.invalid && otp.touched"><i
+                class="uil uil-info-circle"></i>Please provide
+            valid email address</div>
+        <input type="submit" value="Verify" [disabled]="!otpForm.valid">
+    </form>
+</div>
+
+<!-- Reset Password -->
+<ng-template #resetPasswordSection>
+    <app-reset-password-section></app-reset-password-section>
+</ng-template>

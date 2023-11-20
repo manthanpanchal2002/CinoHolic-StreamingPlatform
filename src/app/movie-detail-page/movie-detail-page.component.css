@@ -1,0 +1,87 @@
+.container{
+    padding: 30px;
+}
+
+.title{
+    font-size: 32px;
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+.add-to-fav{
+    float: right;
+    color: var(--primary-color);
+    font-size: large;
+    cursor: pointer;
+}
+
+.add-to-fav i:hover{
+    color: red;
+    transition: all 0.3s ease-in-out;
+}
+
+.genres{
+    font-size: large;
+    color: var(--primary-color);
+}
+
+.keyTheme{
+    font-size: large;
+    margin-top: 30px;
+}
+
+.description{
+    color: var(--primary-color);
+    font-size: 14px;
+    text-align: justify;
+}
+
+.cast-director{
+    margin-top: 20px;
+}
+
+.cast-director .cast{
+    font-size: large;
+}
+
+.cast-director .cast-name{
+    color: var(--primary-color);
+    font-size: 14px;
+    text-align: justify;
+}
+
+.cast-director .director{
+    margin-top: 20px;
+    font-size: large;
+}
+
+.cast-director .director-name{
+    color: var(--primary-color);
+    font-size: 14px;
+    text-align: justify;
+}
+
+.watchNow{
+    width: 100%;
+    background-color: white;
+    border: 1px solid var(--secondary-color);
+    color: black;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    line-height: normal;
+    margin-top: 50px;
+    min-height: 4em;
+    min-width: 0;
+    outline: none;
+    padding: 15px;
+    text-align: center;
+    justify-content: center;
+}
+
+.watchNow:hover{
+    background-color: var(--secondary-color);
+    color: white;
+    transition: all 0.3s ease-in-out;
+}

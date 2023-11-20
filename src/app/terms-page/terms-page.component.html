@@ -1,0 +1,63 @@
+<head>
+    <title>Terms | CinoHolic : Lights, camera, streaming!</title>
+</head>
+
+
+<div class="container" *ngFor="let t of termsData; let i = index">
+    <div class="title">Terms of use</div>
+    <div class="sub-title">{{t.titleInfo}}<span>{{t.label}}</span></div>
+
+    <div class="content">
+        <!-- Content-Brief -->
+        <div class="content-info">
+            {{t.subTitleInfo_P1}}<span>{{t.label}}</span>. {{t.subTitleInfo_P2_a}}<span>{{t.label}}</span>,
+            {{t.subTitleInfo_P2_b}}
+        </div>
+
+        <!-- Content-1 -->
+        <div class="content-1">
+            <div class="content-title">{{t.contentTitle[0]}}</div>
+            <div class="content-title-info">{{t.contentInfo[0]}}</div>
+            <div class="content-title-info">{{t.contentInfo[1]}}</div>
+            <div class="content-title-info">{{t.contentInfo[2]}}</div>
+        </div>
+
+        <!-- Content-2 -->
+        <div class="content-2">
+            <div class="content-title">{{t.contentTitle[1]}}</div>
+            <div class="content-title-info">{{t.contentInfo[3]}}</div>
+            <div class="content-title-info">{{t.contentInfo[4]}}</div>
+            <div class="content-title-info">{{t.contentInfo[5]}}</div>
+            <div class="content-title-info">{{t.contentInfo[6]}}</div>
+        </div>
+
+        <!-- Content-3 -->
+        <div class="content-3">
+            <div class="content-title">{{t.contentTitle[2]}}</div>
+            <div class="content-title-info">{{t.contentInfo[7]}}</div>
+        </div>
+
+        <!-- Content-4 -->
+        <div class="content-4">
+            <div class="content-title">{{t.contentTitle[3]}}</div>
+            <div class="content-title-info">{{t.contentInfo[8]}}</div>
+            <div class="content-title-info">{{t.contentInfo[9]}}</div>
+        </div>
+
+        <!-- Content-5 -->
+        <div class="content-5">
+            <div class="content-title">{{t.contentTitle[4]}}</div>
+            <div class="content-title-info">{{t.contentInfo[10]}}</div>
+        </div>
+
+        <!-- Content-6 -->
+        <div class="content-6">
+            <div class="content-title">{{t.contentTitle[5]}}</div>
+            <div class="content-title-info">{{t.contentInfo[11]}}</div>
+        </div>
+
+        <div class="outro">
+            {{t.outro_P1_a}}<span>{{t.label}}</span>{{t.outro_P1_b}}<a href="" routerLink="/support-page">{{t.supportFormLink}}</a>
+        </div>
+    </div>
+</div>

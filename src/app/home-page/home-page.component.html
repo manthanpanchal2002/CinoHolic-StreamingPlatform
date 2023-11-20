@@ -1,0 +1,119 @@
+<head>
+  <title>Home | CinoHolic : Lights, camera, streaming!</title>
+</head>
+
+
+<div class="container">
+
+  <!-- ################ NavBar ################ -->
+  <div class="navbar">
+    <h1 class="title">
+      CinoHolic
+    </h1>
+
+    <div class="account-icon">
+      <i class="uil uil-user">
+        <ul class="dropdown_content">
+          <li><a href="" routerLink="/my-space-page"><i class="uil uil-estate"></i>My space</a></li>
+          <li><a href="" routerLink="/favourite-page"><i class="uil uil-heart"></i>Favourite</a></li>
+          <li><a href="" routerLink="/subscription-page"><i class="uil uil-usd-circle"></i>Subscription</a></li>
+          <li><a href="" routerLink="/support-page"><i class="uil uil-comments-alt"></i>Support</a></li>
+          <li>
+            <hr>
+          </li>
+          <li>
+            <i class="uil uil-signout"></i>
+            <a href="" routerLink="/signin-page">Sign out</a>
+          </li>
+        </ul>
+      </i>
+    </div>
+
+  </div>
+
+  <div class="data">
+    <!-- ################ Top Recommended movies ################ -->
+    <div class="content-data">
+      <div class="content-title">
+        <div class="title">Top Recommended Movies</div>
+        <div class="more" (click)="getType('movie')" routerLink="/explore-page">Explore More</div>
+      </div>
+
+      <div class="showData" *ngFor="let i of allCollectionData">
+        <div class="card" *ngIf="i.dataType == 'movie'">
+          <div class="card-details">
+            <img [src]="i.imgPath" alt="images">
+            <div class="movieDetails">
+              <div class="name">{{i.movieName}}</div>
+              <div class="duration">{{i.duration}}</div>
+              <div class="genres">{{i.genre}}</div>
+              <div class="rating">{{i.rating}}/5</div>
+              <button class="watchNowbtn" routerLink="/movie-detail-page" (click)="getId(i.id)">Watch Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ################ Top Recommended webseries ################ -->
+    <div class="content-data">
+      <div class="content-title">
+        <div class="title">Top Recommended webseries</div>
+        <div class="more" (click)="getType('webseries')" routerLink="/explore-page">Explore More</div>
+      </div>
+
+      <div class="showData" *ngFor="let i of allCollectionData">
+        <div class="card" *ngIf="i.dataType == 'webseries'">
+          <div class="card-details">
+            <img [src]='i.imgPath' alt="">
+            <div class="movieDetails">
+              <div class="name">{{i.movieName}}</div>
+              <div class="duration"> Ep: {{i.duration}}</div>
+              <div class="genres">{{i.genre}}</div>
+              <div class="rating">{{i.rating}}/5</div>
+              <div class="flex-btn">
+                <button class="watchNowbtn" routerLink="/movie-detail-page" (click)="getId(i.id)">Watch Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ################ Kid's special ################ -->
+    <div class="content-data">
+      <div class="content-title">
+        <div class="title">Kid's special</div>
+        <div class="more" (click)="getType('kid-special')" routerLink="/explore-page">Explore More</div>
+      </div>
+
+      <div class="showData" *ngFor="let i of allCollectionData">
+        <div class="card" *ngIf="i.dataType == 'kid-special'">
+          <div class="card-details">
+            <img [src]="i.imgPath" alt="">
+            <div class="movieDetails">
+              <div class="name">{{i.movieName}}</div>
+              <div class="duration">{{i.duration}}</div>
+              <div class="genres">{{i.genre}}</div>
+              <div class="rating">{{i.rating}}/5</div>
+              <button class="watchNowbtn" routerLink="/movie-detail-page" (click)="getId(i.id)">Watch Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ################ Footer ################ -->
+  <div class="footer">
+    <div class="footer-icons">
+      <i class="uil uil-instagram"></i> <i class="uil uil-facebook"></i><i class="uil uil-twitter"></i><i
+        class="uil uil-youtube"></i>
+    </div>
+    <div class="legal-doc">
+      <a href="" routerLink="/terms-page">Terms of use</a>
+      <a href="" routerLink="/policy-page">Privacy policy</a>
+    </div>
+  </div>
+
+</div>

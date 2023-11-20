@@ -1,0 +1,30 @@
+<head>
+    <title>SignUp | CinoHolic : Lights, camera, streaming!</title>
+</head>
+
+
+<div class="container">
+    <h1>CinoHolic</h1>
+    <p class="Msg" *ngIf="!responseStatusText; else responseError"><span>Register</span> yourself to Unlock the world of stories</p>
+    <ng-template #responseError>
+        <p class="response-error"><i class="uil uil-info-circle"></i>{{responseStatusText}}</p>
+    </ng-template>
+
+        <form #userSignUpForm="ngForm" (ngSubmit)="submitForm(userSignUpForm.value)">
+            <input type="text" placeholder="First name" name="firstName" ngModel required #firstName="ngModel">
+            <div class="errMsg" *ngIf="firstName.invalid && firstName.touched"><i class="uil uil-info-circle"></i>First name is required</div>
+            <input type="text" placeholder="Last name" name="lastName" ngModel required #lastName="ngModel">
+            <div class="errMsg" *ngIf="lastName.invalid && lastName.touched"><i class="uil uil-info-circle"></i>Last name is required</div>
+            <input type="email" placeholder="Email" name="email" ngModel required #email="ngModel">
+            <div class="errMsg" *ngIf="email.invalid && email.touched"><i class="uil uil-info-circle"></i>Please provide valid email address</div>
+            <input type="password" placeholder="Set password" name="password" ngModel required #password="ngModel">
+            <div class="errMsg" *ngIf="password.invalid && password.touched"><i class="uil uil-info-circle"></i>Please provide valid password</div>
+            <br>
+            <input type="submit" value="Sign Up" [disabled]="!userSignUpForm.valid">
+        </form>
+
+    <div class="oldUser">
+        <p>Already have an account? <a href="/signin-page" class="signInLink" (click)="getUserEmail(email.value)">Sign In</a></p>
+    </div>
+
+</div>

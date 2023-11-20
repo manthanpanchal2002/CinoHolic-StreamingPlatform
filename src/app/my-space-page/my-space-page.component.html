@@ -1,0 +1,93 @@
+<head>
+    <title>My space | CinoHolic : Lights, camera, streaming!</title>
+</head>
+
+
+<div class="container" *ngFor="let d of userDetailData">
+    <div class="title">My space
+        <div class="info">
+            <div class="icon">
+                <i class="uil uil-info-circle"></i>
+            </div>
+            <ul class="dropdown_content">
+                <li>Password must be atleast 10 characters long, have minimum one special character, one minimum one
+                    upper and lower case letter</li>
+                <li>The profile page showcases user details, preferences, and activities. It offers a glimpse into one's
+                    digital identity, presenting a personalized snapshot of their online presence.</li>
+                <li>The profile page showcases a user's identity, preferences, and activity on the platform. It offers a
+                    snapshot of their interests, achievements, and personalized settings, allowing others to understand
+                    them better. Users can customize their profiles, adding a unique touch that reflects who they are
+                    within the community.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="sub-title">Manage your account details and change or edit password</div>
+
+    <div class="container-body">
+        <form #updateDetails="ngForm" (ngSubmit)="submitDetails(updateDetails.value)">
+
+
+
+            <div class="container-body-flex">
+
+                <!-- Container-Body-1 -->
+                <div class="user-profile">
+                    <div class="avatar-bg">
+                        <div class="avatar">
+                            <img src="src/assets/images/avatar-1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="member-status">
+                        <div class="member-status-title"><i class="uil uil-star"></i>Premium Member</div>
+                    </div>
+                </div>
+
+                <!-- Container-Body-2 -->
+                <div class="user-edit">
+                    <div class="user-edit-title">General information</div>
+                    <div class="edit-info">
+
+                        <div class="flex-fields">
+                            <div class="firstName-field">
+                                <label for="">First name</label>
+                                <input type="text" placeholder={{d.firstName}} name="firstName" ngModel #firstName="ngModel">
+                            </div>
+
+                            <div class="lastName-field">
+                                <label for="">Last name</label>
+                                <input type="text" placeholder={{d.lastName}} name="lastName" ngModel #lastName="ngModel">
+                            </div>
+                        </div>
+
+                        <div class="emailName-field">
+                            <label for="">Email</label>
+                            <input type="text" placeholder={{d.email}} name="email" ngModel #email="ngModel">
+                        </div>
+
+                    </div>
+                    <button type="submit" class="save-btn">Save edit</button>
+                </div>
+
+            </div>
+
+            <!-- Container-Body-3 -->
+            <div class="container-body-flex">
+                <div class="user-password">
+                    <div class="user-password-title">Change password</div>
+                    <div class="password-info">
+                        <div class="password-field">
+                            <label for="">New password</label>
+                            <input type="password" placeholder="Create password" name="createPassword" ngModel #createPassword="ngModel">
+                        </div>
+                        <div class="password-field">
+                            <label for="">Confirm password</label>
+                            <input type="password" placeholder="Re-enter password" name="password" ngModel #password="ngModel">
+                        </div>
+                    </div>
+                    <button type="submit" class="update-btn">Update</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

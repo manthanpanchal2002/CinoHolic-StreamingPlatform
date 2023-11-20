@@ -1,0 +1,50 @@
+.container{
+    padding: 30px;
+}
+
+.title{
+    font-size: 32px;
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+.sub-title{
+    font-size: large;
+    color: var(--primary-color);
+}
+
+span{
+    font-weight: bold;
+}
+
+.content{
+    color: var(--primary-color);
+    font-size: large;
+    text-align: justify;
+    margin-top: 30px;
+}
+
+.content-title{
+    margin-top: 20px;
+    color: var(--secondary-color);
+}
+
+.content-title-info{
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.outro{
+    margin-top: 20px;
+}
+
+.outro a{
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.outro a:hover{
+    text-decoration: underline;
+    color: var(--secondary-color);
+    transition: all 0.3s ease-in-out;
+}

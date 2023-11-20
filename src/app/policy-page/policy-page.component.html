@@ -1,0 +1,69 @@
+<head>
+    <title>Privacy | CinoHolic : Lights, camera, streaming!</title>
+</head>
+
+<div class="container" *ngFor="let p of privacyData">
+    <div class="title">Privacy policy</div>
+    <div class="sub-title">{{p.titleInfo}}</div>
+
+    <div class="content">
+        <!-- Content-Brief -->
+        <div class="content-info">
+            {{p.subTitleInfo}}
+        </div>
+
+        <!-- Content-1 -->
+        <div class="content-1">
+            <div class="content-title">{{p.contentTitle[0]}}</div>
+            <div class="content-title-info">{{p.contentInfo[0]}}</div>
+            <div class="content-title-info">{{p.contentInfo[1]}}</div>
+            <div class="content-title-info">{{p.contentInfo[2]}}</div>
+            <div class="content-title-info">{{p.contentInfo[3]}}</div>
+        </div>
+
+        <!-- Content-2 -->
+        <div class="content-2">
+            <div class="content-title">{{p.contentTitle[1]}}</div>
+            <div class="content-title-info">{{p.contentInfo[4]}}</div>
+            <div class="content-title-info">{{p.contentInfo[5]}}</div>
+            <div class="content-title-info">{{p.contentInfo[6]}}</div>
+        </div>
+
+        <!-- Content-3 -->
+        <div class="content-3">
+            <div class="content-title">{{p.contentTitle[2]}}</div>
+            <div class="content-title-info">{{p.contentInfo[7]}}</div>
+            <div class="content-title-info">{{p.contentInfo[8]}}</div>
+        </div>
+
+        <!-- Content-4 -->
+        <div class="content-4">
+            <div class="content-title">{{p.contentTitle[3]}}</div>
+            <div class="content-title-info">{{p.contentInfo[9]}}</div>
+        </div>
+
+        <!-- Content-5 -->
+        <div class="content-5">
+            <div class="content-title">{{p.contentTitle[4]}}</div>
+            <div class="content-title-info">{{p.contentInfo[10]}}</div>
+            <div class="content-title-info">{{p.contentInfo[11]}}</div>
+        </div>
+
+        <!-- Content-6 -->
+        <div class="content-6">
+            <div class="content-title">{{p.contentTitle[5]}}</div>
+            <div class="content-title-info">{{p.contentInfo[12]}}</div>
+        </div>
+
+        <!-- Content-7 -->
+        <div class="content-6">
+            <div class="content-title">{{p.contentTitle[6]}}</div>
+            <div class="content-title-info">{{p.contentInfo[13]}}</div>
+        </div>
+
+        <div class="outro">
+            {{p.outro}}
+            <a href="" routerLink="/support-page">{{p.supportFormLink}}</a>
+        </div>
+    </div>
+</div>

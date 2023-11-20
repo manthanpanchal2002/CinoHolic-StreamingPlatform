@@ -1,0 +1,34 @@
+<head>
+    <title>More | CinoHolic : Lights, camera, streaming!</title>
+</head>
+
+<div class="container">
+
+    <div class="content-ttl-srch">
+        <div class="title">The world of stories is just a search away.<span>Start your search</span></div>
+        <div class="search-box">
+            <i class="uil uil-search"></i>
+            <input type="text" class="search-input" placeholder="What are you looking for ?" [(ngModel)]="searchMovie">
+        </div>
+    </div>
+
+    <div class="content-data">
+        
+        <div class="showData" *ngFor="let d of movieDetailData | filter:searchMovie">
+            <div class="card">
+                <div class="card-details">
+                    <img [src]="d.imgPath" alt="images">
+                    <div class="movieDetails">
+                        <div class="name">{{d.movieName}}</div>
+                        <div class="duration">{{d.duration}}</div>
+                        <div class="genres">{{d.genre}}</div>
+                        <div class="rating">{{d.rating}}/5</div>
+                        <button class="watchNowbtn" routerLink="/movie-detail-page" (click)="getId(d.id)">Watch
+                            Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

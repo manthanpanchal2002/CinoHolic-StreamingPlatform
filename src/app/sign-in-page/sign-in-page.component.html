@@ -1,0 +1,30 @@
+<head>
+    <title>SignIn | CinoHolic : Lights, camera, streaming!</title>
+</head>
+
+
+<div class="container">
+    <h1>CinoHolic</h1>
+    <p class="Msg" *ngIf="!responseStatusText; else responseError"><span>Welcome back,</span> verify your credentials to enter into
+        the world of stories</p>
+        <ng-template #responseError>
+            <p class="response-error"><i class="uil uil-info-circle"></i>Oops! {{responseStatusText}}</p>
+        </ng-template>
+
+    <form #userSignInForm="ngForm" (ngSubmit)="submitForm(userSignInForm.value)">
+        <input type="email" placeholder="Email" name="email" ngModel required #email="ngModel">
+        <div class="errMsg" *ngIf="email.invalid && email.touched"><i class="uil uil-info-circle"></i>Please provide
+            valid email address</div>
+        <input type="password" placeholder="Password" name="password" ngModel required #password="ngModel">
+        <div class="errMsg" *ngIf="password.invalid && password.touched"><i class="uil uil-info-circle"></i>Please
+            provide valid password</div>
+        <br>
+        <a class="forgotPSWD" href="/forgot-password-page">Forgot Password?</a>
+        <input type="submit" value="Sign In" [disabled]="!userSignInForm.valid">
+        <!-- <button class="signInbtn" routerLink="/home-page">Sign In</button> -->
+    </form>
+
+    <div class="newUser">
+        <p>Don't have any account? <a href="/signup-page" class="signUpLink" (click)="getUserEmail(email.value)">Sign Up</a></p>
+    </div>
+</div>

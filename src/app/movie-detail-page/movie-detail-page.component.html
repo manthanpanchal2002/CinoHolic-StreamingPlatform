@@ -1,0 +1,30 @@
+<head>
+    <title>Show | CinoHolic : Lights, camera, streaming!</title>
+</head>
+
+
+<div class="content" *ngFor="let d of movieDetailData">
+
+    <iframe width="100%" height="515" [src]="d.youtubeLink" title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+
+
+    <div class="container">
+        <div class="flex-content">
+            <div class="title">{{d.movieName}}</div>
+            <div class="add-to-fav" *ngIf="d.isFavorite == false"><i class="uil uil-heart" (click)="addToFavorites(); checkIsFavourite()"></i></div>
+        </div>
+        <div class="genres">{{d.genre}}</div>
+        <div class="keyTheme">Key Theme</div>
+        <div class="description">{{d.keyTheme}}</div>
+        <div class="cast-director">
+            <div class="cast">Cast</div>
+            <div class="cast-name">{{d.castName}}</div>
+            <div class="director">Director</div>
+            <div class="director-name">{{d.directorName}}</div>
+            <button type="submit" class="watchNow" routerLink="/coming-soon-page">Watch Now</button>
+        </div>
+
+    </div>
+</div>

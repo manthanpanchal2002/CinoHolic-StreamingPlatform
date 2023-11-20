@@ -1,0 +1,84 @@
+<head>
+    <title>Subscription | CinoHolic : Lights, camera, streaming!</title>
+</head>
+
+<div class="container" *ngFor="let s of subscriptionData">
+    <div class="title">
+        Subscription
+        <div class="info">
+            <div class="icon">
+                <i class="uil uil-info-circle"></i>
+            </div>
+            <ul class="dropdown_content">
+                <li>{{s.info[0]}}</li>
+                <li>{{s.info[1]}}</li>
+                <li>{{s.info[2]}}</li>
+            </ul>
+        </div>
+    </div>
+    <div class="sub-title">Get additional <span>35%</span> off on your first Standard Pack</div>
+
+    <!-- Container-Body-1 -->
+    <div class="container-body-flex">
+        <div class="free-trail">
+            <div class="free-trial-float">
+                <div class="free-trail-title">{{s.contentTitle[0]}}</div>
+                <div class="cost">${{s.cost[0]}}/per month</div>
+            </div>
+            <div class="free-trail-sub-title">{{s.contentSubtitle[0]}}</div>
+            <hr>
+
+            <!-- Free trail points -->
+            <div class="free-trail-points">
+                <div class="point">
+                    <i class="uil uil-check-circle"></i>
+                    <span>{{s.contentInfo[0]}}</span>
+                </div>
+                <div class="point">
+                    <i class="uil uil-check-circle"></i>
+                    <span>{{s.contentInfo[1]}}</span>
+                </div>
+                <div class="point">
+                    <i class="uil uil-check-circle"></i>
+                    <span>{{s.contentInfo[2]}}</span>
+                </div>
+                <button class="free-trail-sub-btn">Start trial</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Container-Body-2 -->
+    <div class="container-body-flex">
+        <div class="standard">
+            <div class="standard-float">
+                <div class="standard-title">{{s.contentTitle[1]}}</div>
+                <div class="cost">${{s.cost[1]}}/per month</div>
+            </div>
+            <div class="standard-sub-title">{{s.contentSubtitle[1]}}</div>
+            <hr>
+
+            <!-- Standard points -->
+            <div class="standard-points">
+                <div class="point">
+                    <i class="uil uil-check-circle"></i>
+                    <span>{{s.contentInfo[3]}}</span>
+                </div>
+                <div class="point">
+                    <i class="uil uil-check-circle"></i>
+                    <span>{{s.contentInfo[4]}}</span>
+                </div>
+                <div class="point">
+                    <i class="uil uil-check-circle"></i>
+                    <span>{{s.contentInfo[5]}}</span>
+                </div>
+                <div class="point">
+                    <i class="uil uil-check-circle"></i>
+                    <span>{{s.contentInfo[6]}}</span>
+                </div>
+                <button class="standard-sub-btn">Get standard pack</button>
+            </div>
+        </div>
+    </div>
+
+</div>

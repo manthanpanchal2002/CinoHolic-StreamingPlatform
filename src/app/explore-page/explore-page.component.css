@@ -1,0 +1,130 @@
+.container {
+    padding: 30px;
+}
+
+.content-ttl-srch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title {
+    color: var(--primary-color);
+    font-size: 32px;
+    text-align: center;
+    font-weight: bold;
+}
+
+span {
+    color: var(--secondary-color);
+    display: block;
+    text-align: center;
+}
+
+.search-box {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    width: 50%;
+    height: 30px;
+    padding: 11px;
+    margin-top: 50px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+    border: none;
+}
+
+.search-box:focus-within .uil-search {
+    color: var(--secondary-color);
+    transition: all 0.3s ease-in-out;
+}
+
+.search-box i {
+    border-right: 1px solid var(--primary-color);
+    padding-right: 20px;
+    padding-left: 10px;
+    color: var(--primary-color);
+    font-size: 20px;
+}
+
+.search-input {
+    padding-left: 15px;
+    border: none;
+    width: 100%;
+    outline: none;
+    /* font-size: 12px; */
+}
+
+.content-data {
+    margin-top: 30px;
+}
+
+.showData {
+    margin-top: 10px;
+    display: inline-flex;
+}
+
+.card {
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    height: 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+
+}
+
+.card-details {
+    display: flex;
+    column-gap: 15px;
+}
+
+.card img {
+    width: 50%;
+    object-fit: cover;
+}
+
+.watchNowbtn {
+    width: 100%;
+    background-color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+    color: #ffffff;
+    display: inline-block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    margin-top: 77px;
+    outline: none;
+    padding: 11px 13px 11px 13px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.movieDetails {
+    font-size: 14px;
+    color: var(--primary-color);
+}
+
+.movieDetails .name {
+    margin-bottom: 20px;
+}
+
+.movieDetails .duration {
+    margin-bottom: 20px;
+}
+
+.movieDetails .genres {
+    margin-bottom: 20px;
+}
+
+.movieDetails .duration,
+.genres,
+.rating {
+    font-size: 12px;
+}
